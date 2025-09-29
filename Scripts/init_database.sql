@@ -13,8 +13,10 @@ WARNING:
     and ensure you have proper backups before running this script.
 */
 
+
+
+
 USE master;
-GO
 
 -- Drop and recreate the 'DataWarehouse' database
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
@@ -28,15 +30,17 @@ CREATE DATABASE DataWarehouseDB;
 
 USE DataWarehouseDB;
 
-IF SCHEMA_ID('BRONZE') IS NULL
-    EXEC('CREATE SCHEMA BRONZE');
+IF SCHEMA_ID('bronze') IS NULL
+    EXEC('CREATE SCHEMA bronze');
 GO
 
 
-IF SCHEMA_ID('SILVER') IS NULL
-    EXEC('CREATE SCHEMA SILVER');
+IF SCHEMA_ID('silver') IS NULL
+    EXEC('CREATE SCHEMA silver');
 GO
 
-IF SCHEMA_ID('GOLD') IS NULL
-    EXEC('CREATE SCHEMA GOLD');
+
+IF SCHEMA_ID('gold') IS NULL
+    EXEC('CREATE SCHEMA gold');
 GO
+
