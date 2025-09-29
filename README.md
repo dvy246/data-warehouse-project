@@ -1,62 +1,111 @@
-Building a Modern Data Warehouse using SQL 🚀
+# Building a Modern Data Warehouse using SQL 🚀
 
-Welcome to the Data Warehouse and Analytics Project repository! This project demonstrates a full-fledged data warehousing and analytics solution, covering everything from raw data ingestion to generating actionable insights for decision-making.
+Welcome to the **Data Warehouse and Analytics Project** repository!  
+This project demonstrates a **comprehensive data warehousing and analytics solution**, from raw data ingestion to generating actionable insights for business decision-making.
 
-<img width="1062" height="796" alt="Data Warehouse Architecture" src="https://github.com/user-attachments/assets/bc07b98f-7477-4b62-9f21-75f91c9a3ce0" />
-🏗️ Data Architecture
+---
 
-This project follows Medallion Architecture (Bronze → Silver → Gold) to ensure clean, reliable, and business-ready data:
+![Data Warehouse Architecture](https://github.com/user-attachments/assets/bc07b98f-7477-4b62-9f21-75f91c9a3ce0)
 
-Bronze Layer (Raw Data)
+---
 
-Stores raw source data exactly as received.
+## 📖 Project Overview
 
-Data ingested from CSV files and other sources into SQL Server.
+This project involves:
 
-Ensures traceability, auditing, and reproducibility of all source data.
+- **Data Architecture:** Designing a Modern Data Warehouse using **Medallion Architecture (Bronze, Silver, Gold layers)**.  
+- **ETL Pipelines:** Extracting, transforming, and loading data from source systems into the warehouse.  
+- **Data Modeling:** Developing **fact and dimension tables** optimized for analytical queries (star schema).  
+- **Analytics & Reporting:** Creating **SQL-based reports and dashboards** to generate actionable insights.  
 
-Silver Layer (Cleansed Data)
+🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
 
-Implements data cleansing, normalization, and standardization.
+- SQL Development  
+- Data Architecture  
+- Data Engineering  
+- ETL Pipeline Development  
+- Data Modeling  
+- Data Analytics  
 
-Handles missing values, duplicates, and incorrect formats.
+---
 
-Provides a structured and consistent dataset ready for analytical transformations.
+## 🛠️ Important Links & Tools
 
-Gold Layer (Business-Ready Data)
+**Everything is free to use!**
 
-Houses data modeled into fact and dimension tables (star schema).
+- **Datasets:** Access to project dataset (CSV files).  
+- **SQL Server Express:** Lightweight server for hosting your SQL database.  
+- **SQL Server Management Studio (SSMS):** GUI for managing and interacting with databases.  
+- **Git Repository:** Version control and collaboration.  
+- **DrawIO:** Design **data architecture, data flows, and models**.  
+- **Notion:** Access **project template and steps** for all phases of implementation.
 
-Optimized for reporting, dashboards, and analytics queries.
+---
 
-Acts as the single source of truth for business intelligence and analytics.
+## 🚀 Project Requirements
 
-🔄 ETL Pipelines
+### **Building the Data Warehouse (Data Engineering)**
 
-Extract: Collect data from multiple sources (CSV, databases).
+**Objective:**  
+Develop a modern data warehouse using SQL Server to consolidate **ERP and CRM data**, enabling analytical reporting and informed decision-making.
 
-Transform: Clean, normalize, and structure data in the Silver layer.
+**Specifications:**
 
-Load: Store transformed, business-ready data into Gold layer fact/dimension tables.
+- **Data Sources:** Import data from two source systems (ERP and CRM) provided as CSV files.  
+- **Data Quality:** Cleanse and resolve data quality issues prior to analysis.  
+- **Integration:** Combine both sources into a single, user-friendly data model designed for analytical queries.  
+- **Scope:** Focus on the latest dataset only; historization of data is not required.  
+- **Documentation:** Provide clear documentation of the data model to support both business stakeholders and analytics teams.  
 
-Pipelines ensure data integrity, automation, and reproducibility.
+---
 
-📊 Analytics & Reporting
+### **BI: Analytics & Reporting (Data Analysis)**
 
-SQL queries generate aggregated insights and KPIs.
+**Objective:**  
+Develop SQL-based analytics to deliver detailed insights into:
 
-Data can be connected to visualization tools for dashboards and BI reports.
+- Customer Behavior  
+- Product Performance  
+- Sales Trends  
 
-Supports business decisions by providing actionable and timely insights.
+These insights empower stakeholders with **key business metrics**, enabling **strategic decision-making**.  
 
-🎯 Skills & Expertise Demonstrated
+> For more details, refer to `docs/requirements.md`.
 
-SQL Development & Query Optimization
+---
 
-Data Modeling & Star Schema Design
+## 🏗️ Data Architecture
 
-ETL Pipeline Design & Automation
+This project follows **Medallion Architecture** (Bronze → Silver → Gold) to ensure **clean, reliable, and business-ready data**:
 
-Data Cleansing & Transformation Techniques
+- **Bronze Layer (Raw Data):** Stores raw source data exactly as received. Ensures traceability and auditing.  
+- **Silver Layer (Cleansed Data):** Implements data cleansing, normalization, and standardization. Handles missing values, duplicates, and incorrect formats.  
+- **Gold Layer (Business-Ready Data):** Fact and dimension tables (star schema), optimized for reporting and analytics. Acts as the **single source of truth**.
 
-Analytics & Reporting
+---
+
+## 📂 Repository Structure
+
+```text
+data-warehouse-project/
+│
+├── datasets/                           # Raw datasets (ERP and CRM data)
+│
+├── docs/                               # Documentation and diagrams
+│   ├── etl.drawio                      # ETL workflow diagrams
+│   ├── data_architecture.drawio        # Data warehouse architecture
+│   ├── data_catalog.md                 # Dataset catalog with metadata
+│   ├── data_flow.drawio                # Data flow diagrams
+│   ├── data_models.drawio              # Star schema models
+│   ├── naming-conventions.md           # Naming standards for tables & columns
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Raw data extraction and ingestion
+│   ├── silver/                         # Data cleansing and transformations
+│   ├── gold/                           # Analytical model creation
+│
+├── tests/                              # Quality and validation scripts
+├── README.md                           # Project overview & instructions
+├── LICENSE                             # License information
+├── .gitignore                          # Ignore rules for Git
+└── requirements.txt                    # Project dependencies
