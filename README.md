@@ -12,7 +12,7 @@ This repository showcases a comprehensive, end-to-end data warehousing and analy
 
 ---
 
-### Visuals**
+### Visuals
 
 ![Data Warehouse Architecture](https://github.com/user-attachments/assets/bc07b98f-7477-4b62-9f21-75f91c9a3ce0)
 
