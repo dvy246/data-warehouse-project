@@ -79,22 +79,6 @@ data-warehouse-project/
 └── requirements.txt                    # Project dependencies
 
 ---
-
-### **How to Get Started**
-
-To get this project up and running on your local machine, follow these steps:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
-    ```
-2.  **Set up the database:**
-    * Make sure you have SQL Server Express and SSMS installed.
-    * Run the `scripts/init_database.sql` script to create the necessary databases and schemas.
-3.  **Run the ETL pipelines:**
-    * Execute the SQL scripts in the `scripts/` folder in the following order:
-        1.  `bronze/`
-        2.  `silver/`
         3.  `gold/`
 4.  **Explore the data:**
     * Connect to the database using SSMS and start querying the `gold` layer tables!
