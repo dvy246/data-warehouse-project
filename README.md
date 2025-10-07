@@ -4,11 +4,21 @@ This repository showcases a comprehensive, end-to-end data warehousing and analy
 
 ---
 
-### **Key Features**
-* **Scalable Medallion Architecture**: Implemented a robust and scalable Bronze, Silver, and Gold layer architecture to ensure data quality, governance, and traceability across the entire data pipeline.
-* **Optimized Star Schema Modeling**: Designed and developed a star schema data model with fact and dimension tables, optimized for high-performance analytical queries and business intelligence applications.
-* **Automated ETL Pipelines**: Built efficient and repeatable SQL-based ETL scripts to handle data extraction, transformation, cleansing, and loading, ensuring data is always accurate and up-to-date.
-* **Actionable Business Insights**: Developed a suite of SQL-based reports and analytics to uncover key business metrics related to customer behavior, product performance, and sales trends.
+## 🧩 Key Features
+
+🌐 **Scalable Medallion Architecture**  
+→ Bronze, Silver, and Gold layers ensure data quality, governance, and traceability across every stage.
+
+⭐ **Optimized Star Schema Modeling**  
+→ Carefully designed fact and dimension tables for lightning-fast analytical queries.
+
+⚙️ **Automated ETL Pipelines**  
+→ Robust SQL-based ETL scripts that clean, transform, and load data automatically using Apache Airflow.
+
+📊 **Actionable Business Insights**  
+→ Ready-to-use analytical models and dashboards for decision-making around customer, sales, and product performance.
+
+---
 
 ---
 
@@ -43,13 +53,18 @@ In today's data-driven landscape, businesses need a single source of truth to ma
 
 ---
 
-### **Data Architecture Deep Dive**
+## 🧠 Data Architecture Deep Dive
 
-This project leverages a modern **Medallion Architecture** to progressively refine and transform data, ensuring the highest quality for analytics.
+This project follows a **Medallion Architecture** to refine and transform data through layered enrichment.
 
-* **Bronze Layer (Raw Ingestion):** This layer serves as the initial landing zone for all source data, providing an unaltered, auditable copy of the raw ERP and CRM files.
-* **Silver Layer (Cleansed & Conformed):** Data from the Bronze layer is cleansed, normalized, and integrated. This is where data quality rules are applied to handle missing values, duplicates, and inconsistencies.
-* **Gold Layer (Business-Ready & Optimized):** The Silver layer's cleansed data is transformed into a highly optimized star schema, consisting of fact and dimension tables. This is the "single source of truth" for all analytics and reporting.
+🎖 **Bronze Layer — Raw Ingestion**  
+> The landing zone for raw ERP and CRM data. Nothing is altered, ensuring full auditability.
+
+⚗️ **Silver Layer — Cleansed & Conformed**  
+> Handles data quality, normalization, and schema alignment. Duplicates and missing values are fixed here.
+
+💰 **Gold Layer — Business-Ready Analytics**  
+> Data is shaped into a **star schema** optimized for dashboards, KPIs, and business intelligence tools.
 
 ---
 ---
