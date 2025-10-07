@@ -2,35 +2,33 @@ from airflow.models.dag import DAG
 from airflow.providers.microsoft.mssql.operators.mssql import MsSqlOperator
 import pendulum
 
-MSSQL_CONNECTION_ID = "mera_sql_server"
+MSSQL_CONNECTION_ID = "sql_server_dwh"
 
 with DAG(
-    dag_id="data_warehouse_pipeline",
+    dag_id="full_dwh_pipeline",
     start_date=pendulum.datetime(2025, 1, 1, tz="UTC"),
     schedule=None,
     catchup=False,
     tags=["dwh-project"],
+    template_searchpath="/opt/airflow/scripts"
 ) as dag:
 
-    # Step 1: Bronze layer ka script chalao
-    run_bronze_script = MsSqlOperator(
-        task_id="run_bronze_layer_script",
+    load_bronze = MsSqlOperator(
+        task_id="load_bronze_layer",
         mssql_conn_id=MSSQL_CONNECTION_ID,
-        sql="Scripts/bronze/load_bronze.sql",
-    )
-    
-    run_silver_script=MsSqlOperator(
-        task_id="run_silver_layer_script",
-        mssql_conn_id=MSSQL_CONNECTION_ID,
-        sql="Scripts/silver/load_bronze.sql",
+        sql="bronze/load_bronze.sql",
     )
 
-    # Step 2: Gold layer ka script chalao
-    run_gold_script = MsSqlOperator(
-        task_id="run_gold_layer_script",
+    load_silver = MsSqlOperator(
+        task_id="load_silver_layer",
         mssql_conn_id=MSSQL_CONNECTION_ID,
-        sql="Scripts/gold/data_modelling/fact_gold.sql",
+        sql="silver/load_silver.sql",
     )
 
-    # Order batao: Pehle bronze chalao, phir gold chalao
-run_bronze_script >> run_silver_script>>run_gold_script
+    load_gold = MsSqlOperator(
+        task_id="load_gold_layer",
+        mssql_conn_id=MSSQL_CONNECTION_ID,
+        sql="gold/ddl_gold.sql",
+    )
+
+    load_bronze >> load_silver >> load_gold
