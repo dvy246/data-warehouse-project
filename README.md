@@ -34,7 +34,7 @@ In today's data-driven landscape, businesses need a single source of truth to ma
 | Category          | Tool / Technology                                      |
 | ----------------- | ------------------------------------------------------ |
 | **Database** | SQL Server Express                                     |
-| **IDE / Querying**| SQL Server Management Studio (SSMS)                    |
+| **IDE / Querying**| VS CODE/SQL Server Management Studio (SSMS)                   |
 | **Architecture** | Medallion Architecture, Star Schema                    |
 | **Version Control**| Git & GitHub                                           |
 | **Diagramming** | Draw.io                                                |
