@@ -25,8 +25,6 @@ This repository showcases a comprehensive, end-to-end data warehousing and analy
 ### **Live Demo / Visuals**
 
 ![Data Warehouse Architecture](https://github.com/user-attachments/assets/bc07b98f-7477-4b62-9f21-75f91c9a3ce0)
-*(A GIF or a few screenshots of your dashboards or query results would be highly engaging here!)*
-
 ---
 
 ### **Business Case & Project Objective**
