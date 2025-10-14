@@ -1,4 +1,4 @@
-# Enterprise-Grade Data Warehouse for Business Intelligence 🚀
+# MODERN DATA WAREHOUSE FOR BUSINESS INTELLIGENCE 🚀
 
 This repository showcases a comprehensive, end-to-end data warehousing and analytics solution built from the ground up. It demonstrates the entire data lifecycle, from ingesting raw, disparate data sources to generating actionable business insights. This project is a testament to my skills in **Data Engineering**, **Data Architecture**, and **Data Analytics**.
 
