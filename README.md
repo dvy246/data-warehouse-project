@@ -67,6 +67,10 @@ This project follows a **Medallion Architecture** to refine and transform data t
 ---
 ---
 
+## 📊 BI Reproting
+
+-  The dashboards are present in this repository  https://github.com/dvy246/tableau-project.git
+  
 ## Apache Airflow Setup and Usage
 
 This project utilizes Apache Airflow for orchestrating the data warehouse ETL pipeline. Follow these steps to set up and run Airflow locally using Docker Compose.
