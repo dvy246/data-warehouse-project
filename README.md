@@ -99,7 +99,8 @@ git clone https://github.com/dvy246/data-warehouse-project.git
 Follow ETL pipeline setup instructions in the documentation for automated scheduling with Apache Airflow.
 ```
 
-Contact
+## Contact
 
-Created by Divy Yadav
-For questions or collaboration, open an issue or reach out via GitHub.
+Connect with me on LinkedIn: [Divy Yadav](https://www.linkedin.com/in/dvy246/)
+
+
