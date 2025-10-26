@@ -1,4 +1,4 @@
-# Modern Data Warehouse for Business Intelligence
+🚀 # Modern Data Warehouse for Business Intelligence
 
 A full-scale, end-to-end data warehousing solution that consolidates multiple data sources into a single source of truth. This project enables businesses to gain actionable insights for sales, marketing, and product optimization.
 
